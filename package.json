@@ -1,0 +1,11 @@
+{
+  "name": "gallery-nft",
+  "version": "1.0.0",
+  "description": "smart contract de gallerias de nft",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
