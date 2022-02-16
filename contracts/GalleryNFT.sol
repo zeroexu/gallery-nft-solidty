@@ -42,7 +42,8 @@ contract GalleryNFT is ERC721, ERC721Enumerable {
                 "}"
             )
         );
-        return jsonURI;
+        return
+            string(abi.encodePacked("data:application/json;base64,", jsonURI));
     }
 
     function _beforeTokenTransfer(
