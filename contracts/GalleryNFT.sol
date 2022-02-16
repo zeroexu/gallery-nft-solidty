@@ -4,6 +4,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+import "./Base64.sol";
 
 contract GalleryNFT is ERC721, ERC721Enumerable {
     using Counters for Counters.Counter;
@@ -31,7 +32,7 @@ contract GalleryNFT is ERC721, ERC721Enumerable {
             "ERC721 Metadata: URI query for nonexistent token"
         );
         //TODO: ver como agregar la imagen
-        string memory jsonURI = string(
+        string memory jsonURI = Base64.encode(
             abi.encodePacked(
                 '{ "name": "Pokemon # ',
                 tokenId,
