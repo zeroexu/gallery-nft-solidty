@@ -5,14 +5,15 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "./Base64.sol";
+import "./PlatziPunksDNA.sol";
 
-contract GalleryNFT is ERC721, ERC721Enumerable {
+contract PlatziPunks is ERC721, ERC721Enumerable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _idCounter;
     uint256 public maxSupply;
 
-    constructor() ERC721("GalleryNFT", "ZRXGN") {}
+    constructor() ERC721("ZRXPlatziPunks", "ZRXGN") {}
 
     function mint() public {
         uint256 current = _idCounter.current();
